@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40E0B0261E735A480032AF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0251E735A480032AF37 /* main.m */; };
+		40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0281E735A480032AF37 /* TBNAppDelegate.m */; };
+		40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B02B1E735A480032AF37 /* TBNRootViewController.m */; };
+		40E0B02F1E735A480032AF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B02D1E735A480032AF37 /* Main.storyboard */; };
+		40E0B0311E735A480032AF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B0301E735A480032AF37 /* Assets.xcassets */; };
+		40E0B0341E735A480032AF37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B0321E735A480032AF37 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40E0B0211E735A480032AF37 /* tobaccno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tobaccno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E0B0251E735A480032AF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40E0B0271E735A480032AF37 /* TBNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNAppDelegate.h; sourceTree = "<group>"; };
+		40E0B0281E735A480032AF37 /* TBNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNAppDelegate.m; sourceTree = "<group>"; };
+		40E0B02A1E735A480032AF37 /* TBNRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNRootViewController.h; sourceTree = "<group>"; };
+		40E0B02B1E735A480032AF37 /* TBNRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNRootViewController.m; sourceTree = "<group>"; };
+		40E0B02E1E735A480032AF37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40E0B0301E735A480032AF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40E0B0331E735A480032AF37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40E0B0351E735A480032AF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40E0B01E1E735A470032AF37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40E0B0181E735A470032AF37 = {
+			isa = PBXGroup;
+			children = (
+				40E0B0231E735A480032AF37 /* tobaccno */,
+				40E0B0221E735A480032AF37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40E0B0221E735A480032AF37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B0211E735A480032AF37 /* tobaccno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E0B0231E735A480032AF37 /* tobaccno */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B03B1E735A880032AF37 /* Application */,
+				40E0B03D1E735AA00032AF37 /* UI */,
+				40E0B0241E735A480032AF37 /* Supporting Files */,
+			);
+			path = tobaccno;
+			sourceTree = "<group>";
+		};
+		40E0B0241E735A480032AF37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B02D1E735A480032AF37 /* Main.storyboard */,
+				40E0B0301E735A480032AF37 /* Assets.xcassets */,
+				40E0B0321E735A480032AF37 /* LaunchScreen.storyboard */,
+				40E0B0351E735A480032AF37 /* Info.plist */,
+				40E0B0251E735A480032AF37 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40E0B03B1E735A880032AF37 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B0271E735A480032AF37 /* TBNAppDelegate.h */,
+				40E0B0281E735A480032AF37 /* TBNAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		40E0B03C1E735A8D0032AF37 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B02A1E735A480032AF37 /* TBNRootViewController.h */,
+				40E0B02B1E735A480032AF37 /* TBNRootViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		40E0B03D1E735AA00032AF37 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				40E0B03C1E735A8D0032AF37 /* ViewControllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40E0B0201E735A470032AF37 /* tobaccno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E0B0381E735A480032AF37 /* Build configuration list for PBXNativeTarget "tobaccno" */;
+			buildPhases = (
+				40E0B01D1E735A470032AF37 /* Sources */,
+				40E0B01E1E735A470032AF37 /* Frameworks */,
+				40E0B01F1E735A470032AF37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tobaccno;
+			productName = tobaccno;
+			productReference = 40E0B0211E735A480032AF37 /* tobaccno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40E0B0191E735A470032AF37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TBN;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Brian Olencki";
+				TargetAttributes = {
+					40E0B0201E735A470032AF37 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9UKYMVL752;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 40E0B01C1E735A470032AF37 /* Build configuration list for PBXProject "tobaccno" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40E0B0181E735A470032AF37;
+			productRefGroup = 40E0B0221E735A480032AF37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40E0B0201E735A470032AF37 /* tobaccno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40E0B01F1E735A470032AF37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E0B0341E735A480032AF37 /* LaunchScreen.storyboard in Resources */,
+				40E0B0311E735A480032AF37 /* Assets.xcassets in Resources */,
+				40E0B02F1E735A480032AF37 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40E0B01D1E735A470032AF37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */,
+				40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */,
+				40E0B0261E735A480032AF37 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40E0B02D1E735A480032AF37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E0B02E1E735A480032AF37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40E0B0321E735A480032AF37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E0B0331E735A480032AF37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40E0B0361E735A480032AF37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40E0B0371E735A480032AF37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40E0B0391E735A480032AF37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9UKYMVL752;
+				INFOPLIST_FILE = tobaccno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		40E0B03A1E735A480032AF37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9UKYMVL752;
+				INFOPLIST_FILE = tobaccno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40E0B01C1E735A470032AF37 /* Build configuration list for PBXProject "tobaccno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E0B0361E735A480032AF37 /* Debug */,
+				40E0B0371E735A480032AF37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E0B0381E735A480032AF37 /* Build configuration list for PBXNativeTarget "tobaccno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E0B0391E735A480032AF37 /* Debug */,
+				40E0B03A1E735A480032AF37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40E0B0191E735A470032AF37 /* Project object */;
+}
