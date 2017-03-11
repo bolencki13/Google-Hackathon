@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bean-iOS-OSX-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99294505C0316915FD6FB495B99454B9</key>
+		<key>455EDDB33FE4F21E7704835225CDA06B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89DBA97C050A29D44AD79F2C8ED0AF59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A0C71E55577744C6097E19868607DAF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>EF8F4D193A5C4FB9F9039F94751FC71A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA7FEB82F5203C52D491A224EA13C7F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
