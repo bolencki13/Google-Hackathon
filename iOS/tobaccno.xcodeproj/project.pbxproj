@@ -20,7 +20,7 @@
 		456A0EEE1E737BC100E58DB4 /* TBNDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EED1E737BC100E58DB4 /* TBNDevice.m */; };
 		456A0EF31E738B6500E58DB4 /* APIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EF21E738B6500E58DB4 /* APIMethods.m */; };
 		456A0F041E738C4E00E58DB4 /* MongoID.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EFF1E738C4E00E58DB4 /* MongoID.m */; };
-		456A0F051E738C4E00E58DB4 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0F011E738C4E00E58DB4 /* OpenUDID.m */; };
+		456A0F051E738C4E00E58DB4 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0F011E738C4E00E58DB4 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		456A0F061E738C4E00E58DB4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0F031E738C4E00E58DB4 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
@@ -205,15 +205,39 @@
 			name = Backend;
 			sourceTree = "<group>";
 		};
-		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+		45CA8AD41E744A3400790C1B /* Mongo ID */ = {
 			isa = PBXGroup;
 			children = (
 				456A0EFE1E738C4E00E58DB4 /* MongoID.h */,
 				456A0EFF1E738C4E00E58DB4 /* MongoID.m */,
+			);
+			name = "Mongo ID";
+			sourceTree = "<group>";
+		};
+		45CA8AD51E744A3B00790C1B /* Open UDID */ = {
+			isa = PBXGroup;
+			children = (
 				456A0F001E738C4E00E58DB4 /* OpenUDID.h */,
 				456A0F011E738C4E00E58DB4 /* OpenUDID.m */,
+			);
+			name = "Open UDID";
+			sourceTree = "<group>";
+		};
+		45CA8AD61E744A4200790C1B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
 				456A0F021E738C4E00E58DB4 /* Reachability.h */,
 				456A0F031E738C4E00E58DB4 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45CA8AD41E744A3400790C1B /* Mongo ID */,
+				45CA8AD51E744A3B00790C1B /* Open UDID */,
+				45CA8AD61E744A4200790C1B /* Reachability */,
 				132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */,
 			);
 			name = Frameworks;
@@ -254,7 +278,7 @@
 				TargetAttributes = {
 					40E0B0201E735A470032AF37 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9UKYMVL752;
+						DevelopmentTeam = EM32C32CW4;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -474,9 +498,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9UKYMVL752;
+				DEVELOPMENT_TEAM = EM32C32CW4;
 				INFOPLIST_FILE = tobaccno/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,9 +516,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9UKYMVL752;
+				DEVELOPMENT_TEAM = EM32C32CW4;
 				INFOPLIST_FILE = tobaccno/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
 				PRODUCT_NAME = "$(TARGET_NAME)";

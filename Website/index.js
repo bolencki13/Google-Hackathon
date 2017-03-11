@@ -3,13 +3,13 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser')
 var server = require('http').createServer(app);
-// var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/tobaccno');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/tobaccno');
 
 app.set('views', __dirname + '/views');
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

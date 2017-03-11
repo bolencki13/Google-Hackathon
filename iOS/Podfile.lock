@@ -18,6 +18,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - ABUtils
   - ABVolumeControl
   - AFNetworking
+  - ChameleonFramework
   - Realm
 
 SPEC CHECKSUMS:
@@ -36,8 +40,9 @@ SPEC CHECKSUMS:
   ABUtils: 92797d216600b2b0016566ca3886933c5a281101
   ABVolumeControl: 781215146c6d46476c8b0f5e92b420ddd60eeea0
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
 
-PODFILE CHECKSUM: 3ba1e3b4023947f034d8060e8306aea85beb28d0
+PODFILE CHECKSUM: 664cccf2a40280593865f561d382b402c77c951e
 
 COCOAPODS: 1.2.0
