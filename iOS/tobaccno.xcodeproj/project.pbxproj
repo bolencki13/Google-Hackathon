@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AD746FD0F99DCD4E5F3FBA5 /* libPods-tobaccno.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */; };
 		40E0B0261E735A480032AF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0251E735A480032AF37 /* main.m */; };
 		40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0281E735A480032AF37 /* TBNAppDelegate.m */; };
 		40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B02B1E735A480032AF37 /* TBNRootViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.debug.xcconfig"; sourceTree = "<group>"; };
+		132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tobaccno.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E0B0211E735A480032AF37 /* tobaccno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tobaccno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E0B0251E735A480032AF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40E0B0271E735A480032AF37 /* TBNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNAppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		40E0B0301E735A480032AF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E0B0331E735A480032AF37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40E0B0351E735A480032AF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.release.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD746FD0F99DCD4E5F3FBA5 /* libPods-tobaccno.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393ECE4556A2BEC35280A960 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */,
+				FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		40E0B0181E735A470032AF37 = {
 			isa = PBXGroup;
 			children = (
 				40E0B0231E735A480032AF37 /* tobaccno */,
 				40E0B0221E735A480032AF37 /* Products */,
+				393ECE4556A2BEC35280A960 /* Pods */,
+				64C59CC91BB2CECF845D21C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +119,14 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40E0B0381E735A480032AF37 /* Build configuration list for PBXNativeTarget "tobaccno" */;
 			buildPhases = (
+				0FB9EE3533C9570952E0F151 /* [CP] Check Pods Manifest.lock */,
 				40E0B01D1E735A470032AF37 /* Sources */,
 				40E0B01E1E735A470032AF37 /* Frameworks */,
 				40E0B01F1E735A470032AF37 /* Resources */,
+				1A4DAF2A26ECE52FE7650D4D /* [CP] Embed Pods Frameworks */,
+				CE10EAD8C40C398E89036DB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,6 +197,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FB9EE3533C9570952E0F151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A4DAF2A26ECE52FE7650D4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE10EAD8C40C398E89036DB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40E0B01D1E735A470032AF37 /* Sources */ = {
@@ -294,6 +369,7 @@
 		};
 		40E0B0391E735A480032AF37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9UKYMVL752;
@@ -307,6 +383,7 @@
 		};
 		40E0B03A1E735A480032AF37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9UKYMVL752;
