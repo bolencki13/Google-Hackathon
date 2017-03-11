@@ -13,5 +13,6 @@ target 'tobaccno' do
     pod 'ABKeyboardAccessory'
     pod 'ABMediaView'
     pod 'ChameleonFramework'
+    pod 'Bean-iOS-OSX-SDK'
 
 end

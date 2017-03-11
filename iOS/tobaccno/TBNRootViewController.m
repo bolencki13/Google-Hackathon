@@ -7,6 +7,7 @@
 //
 
 #import "TBNRootViewController.h"
+#import "STLBluetoothManager.h"
 
 @interface TBNRootViewController ()
 
@@ -26,4 +27,29 @@
 }
 
 
+- (IBAction)pairAction:(id)sender {
+    [[STLBluetoothManager sharedManager] startScanningForDevices:^(NSArray<CBPeripheral *> *peripherals) {
+        NSLog(@"Peripherals %@", peripherals);
+        
+        if (peripherals.count) {
+            CBPeripheral *peripheral = [peripherals firstObject];
+            
+            if ([ABUtils notNull:peripheral]) {
+                [[STLBluetoothManager sharedManager] connectToPeripheral:peripheral success:^(CBPeripheral *peripheral) {
+                    
+                    NSString *dataString = @"1.. 2.. 3.. testing transmission";
+                    NSData *command = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+                    [peripheral writeValue:command forCharacteristic:[[peripheral.services objectAtIndex:0].characteristics objectAtIndex:0] type:CBCharacteristicWriteWithResponse];
+                    
+                } failed:^(NSError *error) {
+                    NSLog(@"Error %@", error);
+                }];
+                
+                
+            }
+           
+        }
+        
+    }];
+}
 @end
