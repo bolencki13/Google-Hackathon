@@ -21,6 +21,9 @@
         if ([ABUtils notNull:attributes]) {
             
             if ([ABUtils notNull:[attributes valueForKey:@"id"]]) self.dragID = [attributes valueForKey:@"id"];
+            if ([ABUtils notNull:[attributes valueForKey:@"date"]]) self.dragID = [attributes valueForKey:@"date"];
+            if ([ABUtils notNull:[attributes valueForKey:@"duration"]]) self.dragID = [attributes valueForKey:@"duration"];
+            
         }
         
     }
