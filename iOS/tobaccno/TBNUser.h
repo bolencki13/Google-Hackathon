@@ -28,4 +28,5 @@
 
 /// Custom init with dictionary
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
+
 @end

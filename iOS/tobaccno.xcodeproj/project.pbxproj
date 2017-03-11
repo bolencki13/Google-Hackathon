@@ -205,15 +205,39 @@
 			name = Backend;
 			sourceTree = "<group>";
 		};
-		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+		45CA8AD41E744A3400790C1B /* Mongo ID */ = {
 			isa = PBXGroup;
 			children = (
 				456A0EFE1E738C4E00E58DB4 /* MongoID.h */,
 				456A0EFF1E738C4E00E58DB4 /* MongoID.m */,
+			);
+			name = "Mongo ID";
+			sourceTree = "<group>";
+		};
+		45CA8AD51E744A3B00790C1B /* Open UDID */ = {
+			isa = PBXGroup;
+			children = (
 				456A0F001E738C4E00E58DB4 /* OpenUDID.h */,
 				456A0F011E738C4E00E58DB4 /* OpenUDID.m */,
+			);
+			name = "Open UDID";
+			sourceTree = "<group>";
+		};
+		45CA8AD61E744A4200790C1B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
 				456A0F021E738C4E00E58DB4 /* Reachability.h */,
 				456A0F031E738C4E00E58DB4 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45CA8AD41E744A3400790C1B /* Mongo ID */,
+				45CA8AD51E744A3B00790C1B /* Open UDID */,
+				45CA8AD61E744A4200790C1B /* Reachability */,
 				132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */,
 			);
 			name = Frameworks;
