@@ -47,17 +47,6 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = policy;
-    //    [manager GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-    //        UIImage *image = responseObject;
-    //        _profileImageView = [[UIImageView alloc] init];
-    //        _profileImageView.image = image;
-    //        [self addProfileImage];
-    //
-    //    } failure:^(NSURLSessionTask *operation, NSError *error) {
-    //
-    //    }];
-    
-    //    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
