@@ -26,5 +26,6 @@
 /// Array of achievements the user has collected
 @property (strong, nonatomic) NSMutableArray *achievements;
 
-
+/// Custom init with dictionary
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 @end
