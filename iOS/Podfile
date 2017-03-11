@@ -7,5 +7,10 @@ target 'tobaccno' do
 
   # Pods for tobaccno
 	pod 'Realm'
+    pod 'AFNetworking'
+    pod 'ABVolumeControl'
+    pod 'ABUtils'
+    pod 'ABKeyboardAccessory'
+    pod 'ABMediaView'
 
 end
