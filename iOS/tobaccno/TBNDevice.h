@@ -23,4 +23,7 @@
 /// Level of liquid for the device (0.0 - 1.0)
 @property (nonatomic) CGFloat liquidLevel;
 
+/// Custom init with dictionary
+//- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+
 @end

@@ -31,14 +31,46 @@
 + (void)getProfile:(NSDictionary *)params completion:(void (^)(TBNUser *user, NSError *error))block {
     
     
-    NSString *url = @"/users/";
+    NSString *url = @"/patients/info/";
     if ([ABUtils notNull:[params valueForKey:@"userID"]]) {
-        url = [@"/users/" stringByAppendingString:[params valueForKey:@"userID"]];
+        url = [@"/patients/info/" stringByAppendingString:[params valueForKey:@"userID"]];
+        
+        APIMethods *x = [[APIMethods alloc] init];
+        [x get:url setHeader:[APIMethods headerFull] setParameter:nil completion:^(NSDictionary *response, NSError *error) {
+            [ABUtils print:response tag:@"Get Profile Response"];
+            if (!error) {
+                NSDictionary *data  = [response valueForKey:@"success_data"];
+                TBNUser *user = [[TBNUser alloc] initWithAttributes:data];
+                block(user, error);
+            }
+            else {
+                block(nil, error);
+            }
+        }];
     }
+}
++ (void)updateProfile:(NSDictionary *)params completion:(void (^)(TBNUser * user, NSError *error))block{
     
-    APIMethods *x = [[APIMethods alloc] init];
-    [x get:url setHeader:[APIMethods headerFull] setParameter:nil completion:^(NSDictionary *response, NSError *error) {
-        [ABUtils print:response tag:@"Get Profile Response"];
+    NSString *url = @"/patients/info/";
+    if ([ABUtils notNull:[params valueForKey:@"userID"]]) {
+        url = [@"/patients/info" stringByAppendingString:[params valueForKey:@"userID"]];
+    }
+    APIMethods *x = [[APIMethods alloc]init];
+    
+    /*parameters for the post should be
+     data =
+     {
+     { userid : blah },      required
+     
+     {
+     name : @"";               at least one required or nothing updated
+     doctorID : @"";
+     achiechvments : (array)
+     nicotineLevel : float;
+     }*/
+    [x put:url setHeader:[APIMethods headerFull] setParameter:params completion:^(NSDictionary *response, NSError *error){
+        [ABUtils print:response tag:@"Profile Update Response"];
+        
         if (!error) {
             NSDictionary *data  = [response valueForKey:@"success_data"];
             TBNUser *user = [[TBNUser alloc] initWithAttributes:data];
@@ -49,5 +81,26 @@
         }
     }];
 }
++ (void)createUser:(NSDictionary *)params completion:(void(^)(TBNUser *user, NSError *error))block{
+    
+    
+    NSString *url = @"/patients/register";
+    
+    APIMethods *x = [[APIMethods alloc]init];
+    [x post:url setHeader:[APIMethods headerFull] setParameter:params completion:^(NSDictionary *response, NSError *error){
+        [ABUtils print:response tag:@"Create Patient Response"];
+    
+        if (!error) {
+            NSDictionary *data  = [response valueForKey:@"success_data"];
+            TBNUser *user = [[TBNUser alloc] initWithAttributes:data];
+            block(user, error);
+        }
+        else {
+            block(nil, error);
+        }
+        
+    }];
+}
+
 
 @end
