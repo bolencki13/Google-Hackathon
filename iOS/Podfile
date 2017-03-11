@@ -12,5 +12,6 @@ target 'tobaccno' do
     pod 'ABUtils'
     pod 'ABKeyboardAccessory'
     pod 'ABMediaView'
+    pod 'ChameleonFramework'
 
 end

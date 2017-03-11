@@ -6,7 +6,7 @@
 //  Copyright © 2017 Brian Olencki. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TBH-Prefix.pch"
 
 @interface TBNRootViewController : UIViewController
 
