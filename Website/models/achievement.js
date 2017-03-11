@@ -24,10 +24,6 @@ var achievementSchema = new Schema({
         type: Date,
         default: new Date().toISOString(),
         required: true
-    },
-    patient: {
-        type: String,
-        required: true
     }
 });
 
@@ -39,7 +35,6 @@ achievementSchema.methods.json = function json() {
     json["goal"] = this.goal;
     json["description"] = this.description;
     json["date"] = this.date;
-    json["patient_id"] = this.patient;
 
     return json;
 }

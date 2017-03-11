@@ -11,17 +11,17 @@ module.exports = {
         });
         patient.save(function(err, patient) {
             if (err == null) {
-                patient.json(function(err1,json1) {
+                patient.json(function(err1, json1) {
                     json["result"] = "success";
                     json["users"] = [
                         json1
                     ];
-                    return complete(err1,json);
+                    return complete(err1, json);
                 });
             } else {
                 json["result"] = "failed";
                 json["message"] = err;
-                return complete(err,json);
+                return complete(err, json);
             }
         });
     },
@@ -53,6 +53,34 @@ module.exports = {
             } else {
                 json["result"] = "failed";
                 json["message"] = "Invalid patient id";
+                return complete(err, json);
+            }
+        });
+    },
+    updateInfo: function(userID, updates, complete) {
+        var json = {};
+        Patient.findOneAndUpdate({
+            _id: userID
+        }, search, {
+            upsert: true
+        }, function(err, patient) {
+            if (err == null) {
+                patients.json(function(err1, json1) {
+                    if (err1 == null) {
+                        json["result"] = "success";
+                        json["patients"] = [
+                            json1
+                        ];
+                        return complete(err1, json);
+                    } else {
+                        json["result"] = "failed";
+                        json["message"] = "Internal server error";
+                        return complete(err, json);
+                    }
+                });
+            } else {
+                json["result"] = "failed";
+                json["message"] = err;
                 return complete(err, json);
             }
         });
