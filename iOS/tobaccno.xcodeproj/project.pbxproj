@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AD746FD0F99DCD4E5F3FBA5 /* libPods-tobaccno.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */; };
 		40E0B0261E735A480032AF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0251E735A480032AF37 /* main.m */; };
 		40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0281E735A480032AF37 /* TBNAppDelegate.m */; };
 		40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B02B1E735A480032AF37 /* TBNRootViewController.m */; };
 		40E0B02F1E735A480032AF37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B02D1E735A480032AF37 /* Main.storyboard */; };
 		40E0B0311E735A480032AF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B0301E735A480032AF37 /* Assets.xcassets */; };
 		40E0B0341E735A480032AF37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0B0321E735A480032AF37 /* LaunchScreen.storyboard */; };
+		456A0EE21E7379B400E58DB4 /* TBNUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EE11E7379B400E58DB4 /* TBNUser.m */; };
+		456A0EE61E7379D900E58DB4 /* TBNAchievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EE51E7379D900E58DB4 /* TBNAchievement.m */; };
+		456A0EEA1E737BAB00E58DB4 /* TBNDrag.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EE91E737BAB00E58DB4 /* TBNDrag.m */; };
+		456A0EEE1E737BC100E58DB4 /* TBNDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0EED1E737BC100E58DB4 /* TBNDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.debug.xcconfig"; sourceTree = "<group>"; };
+		132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tobaccno.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E0B0211E735A480032AF37 /* tobaccno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tobaccno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E0B0251E735A480032AF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40E0B0271E735A480032AF37 /* TBNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNAppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,16 @@
 		40E0B0301E735A480032AF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E0B0331E735A480032AF37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40E0B0351E735A480032AF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456A0EDB1E73798E00E58DB4 /* tobaccno-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tobaccno-Bridging-Header.h"; sourceTree = "<group>"; };
+		456A0EE01E7379B400E58DB4 /* TBNUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNUser.h; sourceTree = "<group>"; };
+		456A0EE11E7379B400E58DB4 /* TBNUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNUser.m; sourceTree = "<group>"; };
+		456A0EE41E7379D900E58DB4 /* TBNAchievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNAchievement.h; sourceTree = "<group>"; };
+		456A0EE51E7379D900E58DB4 /* TBNAchievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNAchievement.m; sourceTree = "<group>"; };
+		456A0EE81E737BAB00E58DB4 /* TBNDrag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNDrag.h; sourceTree = "<group>"; };
+		456A0EE91E737BAB00E58DB4 /* TBNDrag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNDrag.m; sourceTree = "<group>"; };
+		456A0EEC1E737BC100E58DB4 /* TBNDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNDevice.h; sourceTree = "<group>"; };
+		456A0EED1E737BC100E58DB4 /* TBNDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNDevice.m; sourceTree = "<group>"; };
+		FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.release.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD746FD0F99DCD4E5F3FBA5 /* libPods-tobaccno.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393ECE4556A2BEC35280A960 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */,
+				FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		40E0B0181E735A470032AF37 = {
 			isa = PBXGroup;
 			children = (
 				40E0B0231E735A480032AF37 /* tobaccno */,
 				40E0B0221E735A480032AF37 /* Products */,
+				393ECE4556A2BEC35280A960 /* Pods */,
+				64C59CC91BB2CECF845D21C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				40E0B03B1E735A880032AF37 /* Application */,
+				456A0EDA1E73794300E58DB4 /* Objects */,
 				40E0B03D1E735AA00032AF37 /* UI */,
 				40E0B0241E735A480032AF37 /* Supporting Files */,
 			);
@@ -72,6 +102,7 @@
 				40E0B0301E735A480032AF37 /* Assets.xcassets */,
 				40E0B0321E735A480032AF37 /* LaunchScreen.storyboard */,
 				40E0B0351E735A480032AF37 /* Info.plist */,
+				456A0EDB1E73798E00E58DB4 /* tobaccno-Bridging-Header.h */,
 				40E0B0251E735A480032AF37 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -103,6 +134,61 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		456A0EDA1E73794300E58DB4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				456A0EE31E7379C200E58DB4 /* User */,
+				456A0EE71E7379EB00E58DB4 /* Achievement */,
+				456A0EEB1E737BAF00E58DB4 /* Drag */,
+				456A0EEF1E737BC400E58DB4 /* Device */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		456A0EE31E7379C200E58DB4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				456A0EE01E7379B400E58DB4 /* TBNUser.h */,
+				456A0EE11E7379B400E58DB4 /* TBNUser.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		456A0EE71E7379EB00E58DB4 /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				456A0EE41E7379D900E58DB4 /* TBNAchievement.h */,
+				456A0EE51E7379D900E58DB4 /* TBNAchievement.m */,
+			);
+			name = Achievement;
+			sourceTree = "<group>";
+		};
+		456A0EEB1E737BAF00E58DB4 /* Drag */ = {
+			isa = PBXGroup;
+			children = (
+				456A0EE81E737BAB00E58DB4 /* TBNDrag.h */,
+				456A0EE91E737BAB00E58DB4 /* TBNDrag.m */,
+			);
+			name = Drag;
+			sourceTree = "<group>";
+		};
+		456A0EEF1E737BC400E58DB4 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				456A0EEC1E737BC100E58DB4 /* TBNDevice.h */,
+				456A0EED1E737BC100E58DB4 /* TBNDevice.m */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		64C59CC91BB2CECF845D21C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40E0B0381E735A480032AF37 /* Build configuration list for PBXNativeTarget "tobaccno" */;
 			buildPhases = (
+				0FB9EE3533C9570952E0F151 /* [CP] Check Pods Manifest.lock */,
 				40E0B01D1E735A470032AF37 /* Sources */,
 				40E0B01E1E735A470032AF37 /* Frameworks */,
 				40E0B01F1E735A470032AF37 /* Resources */,
+				1A4DAF2A26ECE52FE7650D4D /* [CP] Embed Pods Frameworks */,
+				CE10EAD8C40C398E89036DB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +225,7 @@
 					40E0B0201E735A470032AF37 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9UKYMVL752;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,14 +261,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FB9EE3533C9570952E0F151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A4DAF2A26ECE52FE7650D4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE10EAD8C40C398E89036DB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40E0B01D1E735A470032AF37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456A0EEE1E737BC100E58DB4 /* TBNDevice.m in Sources */,
 				40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */,
 				40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */,
 				40E0B0261E735A480032AF37 /* main.m in Sources */,
+				456A0EE21E7379B400E58DB4 /* TBNUser.m in Sources */,
+				456A0EEA1E737BAB00E58DB4 /* TBNDrag.m in Sources */,
+				456A0EE61E7379D900E58DB4 /* TBNAchievement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,27 +436,36 @@
 		};
 		40E0B0391E735A480032AF37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9UKYMVL752;
 				INFOPLIST_FILE = tobaccno/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tobaccno/tobaccno-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		40E0B03A1E735A480032AF37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9UKYMVL752;
 				INFOPLIST_FILE = tobaccno/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bolencki13.tobaccno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tobaccno/tobaccno-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
