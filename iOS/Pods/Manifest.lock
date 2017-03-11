@@ -1,14 +1,43 @@
 PODS:
+  - ABKeyboardAccessory (0.1.0)
+  - ABMediaView (0.4.1)
+  - ABUtils (0.1.4)
+  - ABVolumeControl (0.1.1)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
 
 DEPENDENCIES:
+  - ABKeyboardAccessory
+  - ABMediaView
+  - ABUtils
+  - ABVolumeControl
+  - AFNetworking
   - Realm
 
 SPEC CHECKSUMS:
+  ABKeyboardAccessory: 29a2314f09d392b46498110eef3a9c99445159fb
+  ABMediaView: 9a3d226775c4fa3e27c988068d5822cfd453531b
+  ABUtils: 92797d216600b2b0016566ca3886933c5a281101
+  ABVolumeControl: 781215146c6d46476c8b0f5e92b420ddd60eeea0
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
 
-PODFILE CHECKSUM: 21c793f718b976c22b2b7f20d60d3b065602bb01
+PODFILE CHECKSUM: 3ba1e3b4023947f034d8060e8306aea85beb28d0
 
 COCOAPODS: 1.2.0
