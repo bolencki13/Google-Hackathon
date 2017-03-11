@@ -30,30 +30,28 @@ var patientSchema = new Schema({
 });
 
 patientSchema.methods.json = function json(complete) {
+    var achievements = this.achievements;
+
     var json = {};
+    json["id"] = this.id;
+    json["name"] = this.name;
+    json["nicotineLevel"] = this.nicotineLevel;
+
     Doctor.find({
         _id: this.doctor
     }, function(err, doctors) {
-        if (err == NULL) {
+        if (err == null) {
             Achievement.find({
                 _id: {
-                    $in: this.achievements
+                    $in: achievements
                 }
             }, function(err1, achievements) {
-                if (err1 == NULL) {
-                    json["id"] = this.id;
-                    json["name"] = this.name;
-                    json["nicotineLevel"] = this.nicotineLevel;
-
-                    var aryDoctors = new Array();
-                    for (var x = 0; x < doctors.length; x++) {
-                        aryDoctors.push(doctors[x].json);
-                    }
-                    json["doctor"] = aryDoctors;
+                if (err1 == null) {
+                    json["doctor"] = doctors[0].json();
 
                     var aryAchievements = new Array();
                     for (var x = 0; x < achievements.length; x++) {
-                        aryAchievements.push(achievements[x].json);
+                        aryAchievements.push(achievements[x].json());
                     }
                     json["achievements"] = aryAchievements;
 

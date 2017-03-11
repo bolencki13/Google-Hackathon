@@ -3,17 +3,18 @@ var express = require('express');
 var Patient = require('./../models/patient.js');
 
 module.exports = {
-    register: function(req, complete) {
+    register: function(info, complete) {
         var json = {};
         var patient = new Patient({
-            name: req.body.name,
-            doctor: req.body.doctor
+            name: info["name"],
+            doctor: info["doctor"],
+            achievements: info["achievements"]
         });
         patient.save(function(err, patient) {
             if (err == null) {
                 patient.json(function(err1, json1) {
                     json["result"] = "success";
-                    json["users"] = [
+                    json["patients"] = [
                         json1
                     ];
                     return complete(err1, json);

@@ -8,7 +8,7 @@ var achievementSchema = new Schema({
     },
     type: {
         type: Number,
-        default: -1,
+        default: 0,
         required: true
     },
     goal: {

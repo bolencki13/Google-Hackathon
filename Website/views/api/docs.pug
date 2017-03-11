@@ -1,0 +1,13 @@
+html(lang="en")
+
+head
+    title Kick It
+body
+    h1 Kick It - API Documentation
+    
+    each value, key in endpoints
+        h3=key
+        ul
+        each solution in value
+            li
+                span [#{solution.method}] #{solution.url}
