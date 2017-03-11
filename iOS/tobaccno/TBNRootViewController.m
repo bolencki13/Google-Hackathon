@@ -27,13 +27,15 @@
     
     
     
-    [manager GET:@"hackathon.bolencki13.com/api/patients/info/58c442f9e1d53e766a93c97f" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET:@"https://hackathon.bolencki13.com/api/patients/info/58c44a9323dc177ddff6638a" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSHTTPURLResponse* r = (NSHTTPURLResponse*)task.response;
         
-        NSLog(@"%@",responseObject);
+        NSLog(@"The response Object is : %@",responseObject);
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         
+        
+        NSLog(@"The error is %@", error);
         NSHTTPURLResponse* r = (NSHTTPURLResponse*)operation.response;
         }
     ];

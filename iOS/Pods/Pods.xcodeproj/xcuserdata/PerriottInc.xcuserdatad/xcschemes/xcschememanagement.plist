@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Pods-tobaccno.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -62,12 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>99294505C0316915FD6FB495B99454B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A0C71E55577744C6097E19868607DAF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C058B9E47B27B4D0C3A1E2F2FAFBA9ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D57F6DD7CBDE11E457971075B0805982</key>
 		<dict>
 			<key>primary</key>
 			<true/>

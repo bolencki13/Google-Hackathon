@@ -66,10 +66,8 @@
      doctorID : @"";
      achiechvments : (array)
      nicotineLevel : float;
-     }
-     
-     */
-    [x post:url setHeader:[APIMethods headerFull] setParameter:nil completion:^(NSDictionary *response, NSError *error){
+     }*/
+    [x put:url setHeader:[APIMethods headerFull] setParameter:params completion:^(NSDictionary *response, NSError *error){
         [ABUtils print:response tag:@"Get Profile Update Response"];
         
         if (!error) {

@@ -20,4 +20,5 @@
 /// Duration of the drag
 @property (nonatomic) CGFloat duration;
 
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 @end

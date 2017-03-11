@@ -34,4 +34,6 @@ typedef NS_ENUM(NSInteger, UserType) {
 /// Goal for the achievements
 @property (nonatomic) CGFloat goal;
 
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+
 @end
