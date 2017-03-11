@@ -6,6 +6,7 @@ module.exports = {
     register: function(info, complete) {
         var json = {};
         var patient = new Patient({
+            _id: info["id"],
             name: info["name"],
             doctor: info["doctor"],
             achievements: info["achievements"]

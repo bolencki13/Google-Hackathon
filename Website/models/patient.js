@@ -6,6 +6,11 @@ var Achievement = require('./achievement');
 var Drag = require('./drag');
 
 var patientSchema = new Schema({
+    _id: {
+        type: String,
+        require: true,
+        unique: true
+    },
     name: {
         type: String,
         required: true
@@ -27,6 +32,8 @@ var patientSchema = new Schema({
         default: new Date().toISOString(),
         required: true
     },
+}, {
+    _id: false
 });
 
 patientSchema.methods.json = function json(complete) {

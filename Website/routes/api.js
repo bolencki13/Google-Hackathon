@@ -35,18 +35,23 @@ router.get('/', function(req, res) {
         }
     }
     json["endpoints"] = endPoints;
-    res.render('api/docs',json);
+    res.render('api/docs', json);
 });
 
 
 // TESTING
 router.get('/db/test', function(req, res) {
-    doctors.register("Doctor 1", function(err, json) {
+    doctors.register({
+        id: mongoID(),
+        name: "Doctor 1"
+    }, function(err, json) {
         achievements.register({
+            id: mongoID(),
             name: "Achievement 1",
             description: "This is achievement 1"
         }, function(err1, json1) {
             patients.register({
+                id: mongoID(),
                 name: "Patient 1",
                 doctor: json["doctors"][0]["id"],
                 achievements: [
@@ -55,6 +60,7 @@ router.get('/db/test', function(req, res) {
             }, function(err2, json2) {
                 for (var x = 0; x < 5; x++) {
                     drags.register({
+                        id: mongoID(),
                         patient: json2["patients"][0]["id"],
                         duration: (x + 1) * 10
                     }, function(err3, json3) {
@@ -78,7 +84,11 @@ router.get('/db/reset', function(req, res) {
 
 // DOCTORS
 router.post('/doctors/register', function(req, res) {
-    patients.register(req.body.name, function(error, json) {
+    var info = {
+        id: req.body.id,
+        name: req.body.name,
+    };
+    patients.register(info, function(error, json) {
         if (error) console.log("/doctors/register => " + error);
         res.send(json);
     });
@@ -94,6 +104,7 @@ router.get('/doctors/info/:doctorID', function(req, res) {
 // PATIENTS
 router.post('/patients/register', function(req, res) {
     var info = {
+        id: req.body.id,
         name: req.body.name,
         doctor: req.body.doctor
     };
@@ -102,9 +113,9 @@ router.post('/patients/register', function(req, res) {
         res.send(json);
     });
 });
-router.put('/patients/info', function(req, res) {
-    patients.updateInfo(req.body.patientID, req.body.updates, function(error, json) {
-        if (error) console.log("/patients/info/ => " + error);
+router.put('/patients/info/:patientID', function(req, res) {
+    patients.updateInfo(req.params.patientID, req.body.updates, function(error, json) {
+        if (error) console.log("/patients/info/" + req.params.patientID + " => " + error);
         res.send(json);
     });
 });
@@ -119,6 +130,7 @@ router.get('/patients/info/:patientID', function(req, res) {
 // ACHIEVEMENTS
 router.post('/achievements/register', function(req, res) {
     achievements.register({
+        id: req.body.id,
         name: req.body.name,
         type: req.body.type,
         goal: req.body.goal,
@@ -144,10 +156,17 @@ router.get('/achievements/info/:achievementID', function(req, res) {
 
 // DRAGS
 router.post('/drags/register', function(req, res) {
-    drags.register(info, function(error, json) {
-        if (error) console.log("/drags/register/ => " + error);
-        res.send(json);
-    });
+    for (var x = 0; x < req.body.drags; x++) {
+        var info = {
+            id: req.body.drags[x].id,
+            patient: req.body.drags[x].patient,
+            duration: req.body.drags[x].duration
+        };
+        drags.register(info, function(error, json) {
+            if (error) console.log("/drags/register/ => " + error);
+            res.send(json);
+        });
+    }
 });
 router.get('/drags/user/:userID', function(req, res) {
     drags.listUser(req.params.userID, function(error, json) {
@@ -164,3 +183,11 @@ router.get('/drags/info/:dragID', function(req, res) {
 
 
 module.exports = router;
+
+
+function mongoID() {
+    var timestamp = (new Date().getTime() / 1000 | 0).toString(16);
+    return timestamp + 'xxxxxxxxxxxxxxxx'.replace(/[x]/g, function() {
+        return (Math.random() * 16 | 0).toString(16);
+    }).toLowerCase();
+};

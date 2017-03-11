@@ -4,6 +4,11 @@ var Schema = mongoose.Schema;
 var Patient = require('./patient')
 
 var dragSchema = new Schema({
+    _id: {
+        type: String,
+        require: true,
+        unique: true
+    },
     duration: {
         type: Number,
         default: 0
@@ -17,6 +22,8 @@ var dragSchema = new Schema({
         type: String,
         required: true,
     }
+}, {
+    _id: false
 });
 
 dragSchema.methods.json = function json() {

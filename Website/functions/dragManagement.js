@@ -6,6 +6,7 @@ module.exports = {
     register: function(info, complete) {
         var json = {};
         var drag = new Drag({
+            _id: info["id"],
             patient: info["patient"],
             duration: info["duration"]
         });

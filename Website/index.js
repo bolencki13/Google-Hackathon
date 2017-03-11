@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/tobaccno');
+// mongoose.set('debug', true);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');

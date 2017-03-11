@@ -2,6 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var achievementSchema = new Schema({
+    _id: {
+        type: String,
+        require: true,
+        unique: true
+    },
     name: {
         type: String,
         required: true
@@ -25,6 +30,8 @@ var achievementSchema = new Schema({
         default: new Date().toISOString(),
         required: true
     }
+}, {
+    _id: false
 });
 
 achievementSchema.methods.json = function json() {

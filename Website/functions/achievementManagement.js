@@ -6,6 +6,7 @@ module.exports = {
     register: function(info, complete) {
         var json = {};
         var achievement = new Achievement({
+            _id:  info["id"],
             name: info["name"],
             type: info["type"],
             goal: info["goal"],

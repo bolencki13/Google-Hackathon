@@ -1,12 +1,14 @@
 var express = require('express');
 
 var Doctor = require('./../models/doctor.js');
+var Patient = require('./../models/patient.js');
 
 module.exports = {
-    register: function(name, complete) {
+    register: function(info, complete) {
         var json = {};
         var doctor = new Doctor({
-            name: name,
+            _id: info["id"],
+            name: info["name"],
         });
         doctor.save(function(err, doctor) {
             if (err == null) {
@@ -29,11 +31,40 @@ module.exports = {
         }, function(err, doctors) {
             if (err == null) {
                 if (doctors.length > 0) {
-                    json["result"] = "success";
-                    json["doctors"] = [
-                        doctors[0].json()
-                    ];
-                    return complete(err, json);
+                    Patient.find({
+                        doctor: doctors[0].id
+                    }, function(err1, patients) {
+                        if (err1 == null) {
+                            if (patients.length > 0) {
+                                var doctorJSON = doctors[0].json();
+                                var aryPatients = new Array();
+                                patients.forEach(function(item, index) {
+                                    item.json(function(err2,json2) {
+                                        aryPatients.push(json2);
+                                        if (index >= patients.length-1) {
+                                            doctorJSON["patients"] = aryPatients;
+
+                                            json["result"] = "success";
+                                            json["doctors"] = [
+                                                doctorJSON
+                                            ];
+                                            return complete(err, json);
+                                        }
+                                    });
+                                });
+                            } else {
+                                json["result"] = "success";
+                                json["doctors"] = [
+                                    doctors[0].json()
+                                ];
+                                return complete(err, json);
+                            }
+                        } else {
+                            json["result"] = "failed";
+                            json["message"] = err1;
+                            return complete(err1, json);
+                        }
+                    });
                 } else {
                     json["result"] = "success";
                     json["doctors"] = [];
