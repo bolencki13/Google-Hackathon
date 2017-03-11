@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TBNDrag : NSObject
+
+/// ID of the drag
+@property (strong, nonatomic) NSString *dragID;
+
+/// Time that the drag was started
+@property (strong, nonatomic) NSDate *date;
+
+/// Duration of the drag
+@property (nonatomic) CGFloat duration;
 
 @end
