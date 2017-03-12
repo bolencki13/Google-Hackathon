@@ -11,6 +11,7 @@
 #import "AFHTTPSessionManager.h"
 #import <ABUtils/ABUtils.h>
 #import "OpenUDID.h"
+#import "MongoID.h"
 
 @implementation APIMethods
 
@@ -22,6 +23,13 @@
 
 + (NSString *)version {
     return @"v0";
+}
+
++ (NSString *)generateMongoID {
+    ObjectID _id = [MongoID id];
+    NSString *str = [MongoID stringWithId: _id];
+    
+    return str;
 }
 
 

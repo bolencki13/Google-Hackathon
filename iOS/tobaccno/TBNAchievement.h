@@ -25,13 +25,16 @@ typedef NS_ENUM(NSInteger, UserType) {
 /// Description of the achievement
 @property (strong, nonatomic) NSString *details;
 
-/// Determines if the user is a doctor
-@property (nonatomic) BOOL isDoctor;
+/// Determines if the achievement is completed
+@property (nonatomic) BOOL isCompleted;
 
 /// ID of doctor associate with this user
 @property (strong, nonatomic) UIImage *image;
 
 /// Goal for the achievements
-@property (nonatomic) CGFloat goal;
+@property (strong, nonatomic) NSNumber *goal;
+
+/// Custom init with dictionary
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
 @end

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery: 78%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0Z-yo-xUh">
+                                <rect key="frame" x="28" y="32" width="97.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liquid Level: 78%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqU-s4-frp">
+                                <rect key="frame" x="28" y="68" width="132.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull Time: 0 seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42q-yq-jtl">
+                                <rect key="frame" x="28" y="107" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whG-QM-ZhM">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="T01-bI-S30"/>
+                                </constraints>
+                                <state key="normal" title="Pair"/>
+                                <connections>
+                                    <action selector="pairAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jYl-Yd-Tnf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-vQ-iyN">
+                                <rect key="frame" x="129" y="265.5" width="116.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.81176470588235294" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rqU-s4-frp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="3fO-an-GbI"/>
+                            <constraint firstItem="whG-QM-ZhM" firstAttribute="top" secondItem="12v-vQ-iyN" secondAttribute="bottom" constant="32" id="59F-Qj-gTF"/>
+                            <constraint firstItem="12v-vQ-iyN" firstAttribute="centerX" secondItem="whG-QM-ZhM" secondAttribute="centerX" id="6U0-WZ-vkN"/>
+                            <constraint firstItem="whG-QM-ZhM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Lq-8O-Epu"/>
+                            <constraint firstItem="42q-yq-jtl" firstAttribute="top" secondItem="rqU-s4-frp" secondAttribute="bottom" constant="18" id="BTG-5S-Hdh"/>
+                            <constraint firstItem="rqU-s4-frp" firstAttribute="top" secondItem="f0Z-yo-xUh" secondAttribute="bottom" constant="15" id="K3B-pj-vdd"/>
+                            <constraint firstItem="whG-QM-ZhM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RNI-YB-mqf"/>
+                            <constraint firstItem="42q-yq-jtl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="RcH-c4-eKM"/>
+                            <constraint firstItem="f0Z-yo-xUh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="rTe-Wk-xWG"/>
+                            <constraint firstItem="f0Z-yo-xUh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="wPY-HH-YHu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="batteryLabel" destination="f0Z-yo-xUh" id="tA9-zo-n4K"/>
+                        <outlet property="connectionLabel" destination="12v-vQ-iyN" id="SkW-Af-lQw"/>
+                        <outlet property="liquidLabel" destination="rqU-s4-frp" id="iLL-bl-Oqk"/>
+                        <outlet property="pairButton" destination="whG-QM-ZhM" id="sWm-Qy-khF"/>
+                        <outlet property="pullTimeLabel" destination="42q-yq-jtl" id="6oQ-fx-XdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

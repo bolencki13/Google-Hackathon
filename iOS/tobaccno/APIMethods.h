@@ -16,6 +16,9 @@
 /// Version of the API
 + (NSString *)version;
 
+/// Generates a MongoID
++ (NSString *)generateMongoID;
+
 /// GET request for API
 -(void)get:(NSString *)url setHeader:(NSDictionary *)header setParameter:(NSDictionary *)param completion:(void (^)(NSDictionary *response, NSError *error))block;
 
