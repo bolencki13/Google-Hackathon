@@ -22,8 +22,10 @@ router.get('/', function(req, res) {
 router.get('/dashboard/:doctorID', function(req, res) {
     var doctor = req.params.doctorID;
     doctor.substring(0, doctor.indexOf('?'));
+    console.log(doctor);
     doctors.info(doctor, function(error, json) {
         if (error) console.log("/doctors/info/" + req.params.doctorID + " => " + error);
+        console.log(json);
         res.render('website/dashboard', json);
     });
 });

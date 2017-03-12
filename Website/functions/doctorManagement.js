@@ -26,10 +26,12 @@ module.exports = {
     },
     info: function(doctorID, complete) {
         var json = {};
+        console.log(doctorID);
         Doctor.find({
             _id: doctorID
         }, function(err, doctors) {
             if (err == null) {
+                console.log(doctors);
                 if (doctors.length > 0) {
                     Patient.find({
                         doctor: doctors[0].id
