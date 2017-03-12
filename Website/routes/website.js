@@ -5,14 +5,24 @@ var router = express.Router();
 var patients = require('./../functions/patientManagement');
 var doctors = require('./../functions/doctorManagement');
 
+var Doctor = require('./../models/doctor');
 
 // WEBSITE
 router.get('/', function(req, res) {
-    res.render('website/index');
+    Doctor.find({},function(err,docs) {
+        var json = {};
+        if (err == null && docs.length > 0) {
+            json["doctor"] = docs[0].id;
+        }
+        console.log(json);
+        res.render('website/index', json);
+    });
 });
 
 router.get('/dashboard/:doctorID', function(req, res) {
-    doctors.info(req.params.doctorID, function(error, json) {
+    var doctor = req.params.doctorID;
+    doctor.substring(0, doctor.indexOf('?'));
+    doctors.info(doctor, function(error, json) {
         if (error) console.log("/doctors/info/" + req.params.doctorID + " => " + error);
         res.render('website/dashboard', json);
     });
