@@ -6,7 +6,7 @@ var patients = require('./../functions/patientManagement');
 var achievements = require('./../functions/achievementManagement')
 var doctors = require('./../functions/doctorManagement');
 var drags = require('./../functions/dragManagement');
-
+var dataTest = require('./../functions/dataTestManagement');
 
 // MIDDLEWARE
 router.use(function(req, res, next) {
@@ -40,47 +40,25 @@ router.get('/', function(req, res) {
 
 
 // TESTING
-router.get('/db/test', function(req, res) {
-    doctors.register({
-        id: mongoID(),
-        name: "Doctor 1"
-    }, function(err, json) {
-        achievements.register({
-            id: mongoID(),
-            name: "Achievement 1",
-            description: "This is achievement 1"
-        }, function(err1, json1) {
-            patients.register({
-                id: mongoID(),
-                name: "Patient 1",
-                doctor: json["doctors"][0]["id"],
-                achievements: [
-                    json1["achievements"][0]["id"]
-                ]
-            }, function(err2, json2) {
-                for (var x = 0; x < 5; x++) {
-                    drags.register({
-                        id: mongoID(),
-                        patient: json2["patients"][0]["id"],
-                        duration: (x + 1) * 10
-                    }, function(err3, json3) {
-                        if (err3) console.log(err3);
-                    });
-                }
-                res.send(json2);
-            });
-        });
+// router.get('/db/new/x/:number', function(req, res) {
+//     dataTest.newXPatients(req.params.number, function(error, json) {
+//         res.send(json);
+//     });
+// });
+router.get('/db/new/:name', function(req, res) {
+    dataTest.newPatient(req.params.name, function(error, json) {
+        res.send(json);
     });
 });
-router.get('/db/reset', function(req, res) {
-    mongoose.connect('mongodb://localhost/tobaccno', function() {
-        mongoose.connection.db.dropDatabase();
-        res.send({
-            result: "success"
-        });
-    });
-});
-
+// router.get('/db/reset', function(req, res) {
+//     mongoose.connect('mongodb://localhost/tobaccno', function() {
+//         mongoose.connection.db.dropDatabase();
+//         res.send({
+//             result: "success"
+//         });
+//     });
+// });
+//
 
 // DOCTORS
 router.post('/doctors/register', function(req, res) {

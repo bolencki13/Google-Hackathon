@@ -9,7 +9,8 @@ module.exports = {
             _id: info["id"],
             name: info["name"],
             doctor: info["doctor"],
-            achievements: info["achievements"]
+            achievements: info["achievements"],
+            nicotineLevel: info["nicotineLevel"]
         });
         patient.save(function(err, patient) {
             if (err == null) {
