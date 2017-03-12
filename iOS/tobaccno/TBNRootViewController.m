@@ -112,8 +112,11 @@
     NSLog(@"Did receive serial data: %@\nFrom bean: %@", data, bean);
     [ABUtils print:data tag:@"Did receive serial bean data"];
     
+    uint8_t byte;
+    [data getBytes:&byte length:1];
+    
+    NSLog(@"TAG: %i",(int)byte);
 }
-
 - (void)bean:(PTDBean *)bean bluetoothError:(BeanBluetoothError)error {
     NSLog(@"Bean Error %lu", (unsigned long)error);
 }
