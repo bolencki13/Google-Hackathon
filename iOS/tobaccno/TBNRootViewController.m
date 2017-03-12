@@ -11,10 +11,12 @@
 #import "APIMethods.h"
 #import "STLBluetoothManager.h"
 
-@interface TBNRootViewController () <PTDBeanManagerDelegate, PTDBeanDelegate> {
+@interface TBNRootViewController () <PTDBeanManagerDelegate, PTDBeanDelegate, CBPeripheralDelegate> {
     PTDBeanManager *mainBeanManager;
     
     PTDBean *mainBean;
+    
+    CBPeripheral *peripheral;
     
 }
 
@@ -119,36 +121,56 @@
 - (IBAction)pairAction:(id)sender {
     NSError *error;
     [mainBeanManager startScanningForBeans_error:&error];
-    
+    return;
     
     if ([ABUtils notNull:error]) {
         NSLog(@"Scan Error: %@", error);
     }
     
-//    [[STLBluetoothManager sharedManager] startScanningForDevices:^(NSArray<CBPeripheral *> *peripherals) {
-//        NSLog(@"Peripherals %@", peripherals);
-//        
-//        if (peripherals.count) {
-//            CBPeripheral *peripheral = [peripherals firstObject];
-//            
-//            if ([ABUtils notNull:peripheral]) {
-//                [[STLBluetoothManager sharedManager] connectToPeripheral:peripheral success:^(CBPeripheral *peripheral) {
-//                    NSLog(@"Connected");
-//                    
-////                    NSString *dataString = @"1.. 2.. 3.. testing transmission";
-////                    NSData *command = [dataString dataUsingEncoding:NSUTF8StringEncoding];
-////                    [peripheral writeValue:command forCharacteristic:[[peripheral.services objectAtIndex:0].characteristics objectAtIndex:0] type:CBCharacteristicWriteWithResponse];
-//                    
-//                } failed:^(NSError *error) {
-//                    NSLog(@"Error %@", error);
-//                }];
-//                
-//                
-//            }
-//           
-//        }
-//        
-//    }];
+    NSLog(@"Scanning...");
+    
+    
+    [[STLBluetoothManager sharedManager] startScanningForDevices:^(NSArray<CBPeripheral *> *peripherals) {
+        NSLog(@"Peripherals %@", peripherals);
+        
+        if (peripherals.count) {
+            peripheral = [peripherals firstObject];
+            
+            if ([ABUtils notNull:peripheral] && [peripheral.name isEqualToString:@"Kick_It"]) {
+                [[STLBluetoothManager sharedManager] connectToPeripheral:peripheral success:^(CBPeripheral *peripheral_) {
+                    NSLog(@"Connected");
+                    
+                    NSString *dataString = @"1.. 2.. 3.. testing transmission";
+                    NSData *command = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+                    [peripheral writeValue:command forCharacteristic:[[peripheral.services objectAtIndex:0].characteristics objectAtIndex:0] type:CBCharacteristicWriteWithResponse];
+                    
+                    peripheral.delegate = self;
+                    
+                    CBCharacteristic *characteristic = nil;
+                    for (CBCharacteristic *characteristic_ in [peripheral.services objectAtIndex:0].characteristics) {
+                        if ([characteristic.UUID.UUIDString isEqualToString:@"A495FF11-C5B1-4B44-B512-1370F02D74DE"]) {
+                            characteristic = characteristic_;
+                            break;
+                        }
+                    }
+                    [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+                    
+                } failed:^(NSError *error) {
+                    NSLog(@"Error %@", error);
+                }];
+                
+                
+            }
+           
+        }
+        
+    }];
 }
 
+#pragma mark - CBPeripheralDelegate
+- (void)peripheral:(CBPeripheral *)peripheral_ didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSLog(@"%@",peripheral_);
+    NSLog(@"%@",characteristic);
+    NSLog(@"%@",error);
+}
 @end

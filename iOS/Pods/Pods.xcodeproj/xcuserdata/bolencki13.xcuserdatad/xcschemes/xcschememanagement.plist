@@ -29,6 +29,16 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>Bean-iOS-OSX-SDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>Pods-tobaccno.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -57,7 +67,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>455EDDB33FE4F21E7704835225CDA06B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6DE9951F4DF79A7A0469214C6E8E524B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89DBA97C050A29D44AD79F2C8ED0AF59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D57F6DD7CBDE11E457971075B0805982</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EF8F4D193A5C4FB9F9039F94751FC71A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA7FEB82F5203C52D491A224EA13C7F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

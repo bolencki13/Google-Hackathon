@@ -69,7 +69,9 @@
         self.connectionSuccess = success;
         self.failed = failed;
         _connectedPeripheral = nil;
-        [_centralManager connectPeripheral:peripheral options:nil];
+        [_centralManager connectPeripheral:peripheral options:@{
+                                                                CBConnectPeripheralOptionNotifyOnNotificationKey : @YES
+                                                                }];
     }
 }
 - (void)disconnnectFromPeripheral:(CBPeripheral*)peripheral {
@@ -84,7 +86,6 @@
         if (![self containsPeripheral:peripheral]) {
             [aryPeripheral addObject:peripheral];
             if (self.discovery) {
-                NSLog(@"ASDF");
                 self.discovery([self peripherals]);
             }
         }
@@ -95,7 +96,7 @@
         case CBManagerStatePoweredOn: {
             if (_shouldScan) {
                 [_centralManager scanForPeripheralsWithServices:@[
-//                                                                  [CBUUID UUIDWithString:BLUE_BEAN_UUID],
+//                                                                   [CBUUID UUIDWithString:BLUE_BEAN_UUID],
                                                                   ] options:nil];
             }
         } break;
@@ -108,7 +109,7 @@
     _connectedPeripheral = peripheral;
     _connectedPeripheral.delegate = self;
     
-    if (_connectedPeripheral.services) {
+    if (_connectedPeripheral.services.count > 0) {
         [self peripheral:_connectedPeripheral didDiscoverServices:nil];
     } else {
         [_connectedPeripheral discoverServices:@[
@@ -126,9 +127,15 @@
     _connectedPeripheral = peripheral;
     NSLog(@"Connected peripheral %@", _connectedPeripheral);
     
-    [_connectedPeripheral discoverCharacteristics:@[
-                                          [CBUUID UUIDWithString:PERIPHERAL_UUID]
-                                         ] forService:[_connectedPeripheral.services objectAtIndex:0]];
+    for (CBService *service in peripheral.services) {
+        NSLog(@"Service: %@",service.UUID.UUIDString);
+    }
+    
+    if (_connectedPeripheral.services.count > 0) {
+        [_connectedPeripheral discoverCharacteristics:@[
+                                                        [CBUUID UUIDWithString:PERIPHERAL_UUID]
+                                                        ] forService:[_connectedPeripheral.services objectAtIndex:0]];
+    }
 }
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     _connectedPeripheral = peripheral;
