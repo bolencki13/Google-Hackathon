@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content
+    table(class="table table-striped")
+        thead(class="thead-inverse")
+            tr
+                th #
+                th Name
+                th Nicotine Level (mg/ml)
+                th Patient Since
+        tbody
+            each doctor in doctors
+                each patient in doctor.patients
+                    tr
+                        th(scope="row") 1
+                        td(onclick=`window.document.location="/profile/${patient.id}"` style="cursor: pointer;") #{patient.name}
+                        td
+                            div(class="dropdown")
+                                button(class="btn dropdown-toggle" type="button" data-toggle="dropdown") #{patient.nicotineLevel}
+                                    span(class="caret")
+                                ul(class="dropdown-menu")
+                                    - var aryNumbers = new Array();
+                                    - for (var x = patient.nicotineLevel-1; x > patient.nicotineLevel-4; x--) {
+                                    -   if (x >= 0) {
+                                    -       aryNumbers.push(x);
+                                    -   }
+                                    - }
+                                    - for (var x = patient.nicotineLevel+1; x < patient.nicotineLevel+4; x++) {
+                                    -   if (x <= 24) {
+                                    -       aryNumbers.push(x);
+                                    -   }
+                                    - }
+                                    each number in aryNumbers
+                                        li
+                                            a(href="#" onclick="update(this)") #{number}
+                        td #{patient.date}        

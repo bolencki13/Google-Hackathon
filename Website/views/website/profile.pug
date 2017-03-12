@@ -1,0 +1,43 @@
+extends layout.pug
+
+block styles
+    script(src="http://canvasjs.com/assets/script/canvasjs.min.js")
+
+block content
+    container(id="chartContainer")
+        
+    
+    script.
+        var width = window.innerWidth;
+        if (width > 768) width = window.innerWidth/2-80;
+        
+        window.onload = function () {
+            var frequency = [{x: 1, y:120}, {x: 2, y: 125}, {x: 3, y: 135}, {x: 4, y: 118}, {x: 5, y: 121},{x: 6, y: 110}, {x: 7, y: 132}, {x: 8, y: 128}, {x: 9, y: 132}, {x: 10, y: 138}];
+            var nicLevel = [{x: 1, y: 24}, {x: 2, y: 24}, {x: 3, y: 24}, {x: 4, y: 22}, {x: 5, y: 22},{x: 6, y: 18}, {x: 7, y: 18}, {x: 8, y: 18}, {x: 9, y: 16}, {x: 10, y: 16}];
+            var chart = new CanvasJS.Chart("chartContainer",{
+                title :{
+                    text: "Usage Over Time"
+                },
+                width: width,
+                axisX: {
+                    title: "Day"
+                },
+                axisY: {
+                    title: "Count"
+                },
+                data: [{
+                    type: "line",
+                    showInLegend: true,
+                    legendText: "Nicotene Level",
+                    dataPoints : nicLevel,
+                },
+                {
+                    type: "line",
+                    showInLegend: true,
+                    legendText: "Total Seconds Inhaling",
+                    dataPoints: frequency,
+                }]
+            });
+            chart.render();
+            console.log("asdf");
+        }

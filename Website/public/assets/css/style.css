@@ -68,7 +68,7 @@ hr {
 }
 
 .navbar-nav li:hover, .navbar-nav li:active, .navbar-nav li:focus {
-    background-color: #5894f9;
+    background-color: #5898f9;
 }
 
 
@@ -131,6 +131,7 @@ section.base {
     background-color: #5898f9;
     border-color: #5898f9;
 }
+
 .form-signin button:hover {
     background-color: #5894f9;
     border-color: #5894f9;
@@ -139,6 +140,7 @@ section.base {
 .form-signin .form-signin-heading {
     margin-bottom: 30px;
 }
+
 .form-signin .checkbox {
     margin-bottom: 15px;
 }
@@ -169,6 +171,18 @@ section.base {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 .form-signin input[type="checkbox"] {
     margin-right: 5px;
+}
+
+
+/* DASHBOARD */
+button.dropdown-toggle {
+    background-color: inherit !important;
+    border:none;
+}
+button.dropdown-toggle:hover {
+    background-color: inherit !important;
+    border:none;
 }

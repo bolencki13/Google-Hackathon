@@ -156,7 +156,7 @@ router.get('/achievements/info/:achievementID', function(req, res) {
 
 // DRAGS
 router.post('/drags/register', function(req, res) {
-    for (var x = 0; x < req.body.drags; x++) {
+    for (var x = 0; x < req.body.drags.length; x++) {
         var info = {
             id: req.body.drags[x].id,
             patient: req.body.drags[x].patient,
@@ -164,7 +164,9 @@ router.post('/drags/register', function(req, res) {
         };
         drags.register(info, function(error, json) {
             if (error) console.log("/drags/register/ => " + error);
-            res.send(json);
+            if (x >= req.body.drags.length-1) {
+                res.send(json);
+            }
         });
     }
 });

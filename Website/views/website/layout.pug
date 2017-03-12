@@ -1,40 +1,40 @@
 html(lang="en")
 
-head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="description" content="Google Hackathon Website")
-    meta(name="author" content="Brian Olencki")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Google Hackathon Website")
+        meta(name="author" content="Brian Olencki")
 
-    title Kick It
-    link(href="public/vendor/css/bootstrap.min.css" rel="stylesheet")
-    link(href="public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-    link(href="public/assets/css/style.css" rel="stylesheet")
-        
-    block styles
-body
-    nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
-        div(class="container")
-            div(class="navbar-header")
-                button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-                    span(class="sr-only") Toggle navigation
-                    span(class="icon-bar")
-                    span(class="icon-bar")
-                    span(class="icon-bar")
-                a(class="navbar-brand" href="http://villa.bolencki13.com/") Kick It
-            div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
-                ul(class="nav navbar-nav")
-                    block menuLeft
-                ul(class="nav navbar-nav navbar-right")
-                    block menuRight
-    section(class="base")
-        div(class="container")
-            div(class="row")
-                div(class="col")
-                    block content    
+        title Kick It
+        link(href="https://hackathon.bolencki13.com/public/vendor/css/bootstrap.min.css" rel="stylesheet")
+        link(href="https://hackathon.bolencki13.com/public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet")
+        link(href="https://hackathon.bolencki13.com/public/assets/css/style.css" rel="stylesheet")
+    
+        block styles
+    body
+        nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+            div(class="container")
+                div(class="navbar-header")
+                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+                        span(class="sr-only") Toggle navigation
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                        span(class="icon-bar")
+                    a(class="navbar-brand" href="https://hackathon.bolencki13.com/") Kick It
+                div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+                    ul(class="nav navbar-nav")
+                        block menuLeft
+                    ul(class="nav navbar-nav navbar-right")
+                        block menuRight
+        section(class="base" style="height: calc(100vh - 170px); overflow: scroll;")
+            div(class="container")
+                div(class="row")
+                    div(class="col")
+                        block content    
     footer
         div(class="container")
             p &copy; 2017 bolencki13. All Rights Reserved.                    
-    script(src="public/vendor/js/jquery.js")
-    script(src="public/vendor/js/bootstrap.min.js")
+    script(src="https://hackathon.bolencki13.com/public/vendor/js/jquery.js")
+    script(src="https://hackathon.bolencki13.com/public/vendor/js/bootstrap.min.js")

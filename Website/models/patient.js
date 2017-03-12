@@ -25,7 +25,7 @@ var patientSchema = new Schema({
     },
     nicotineLevel: {
         type: Number,
-        default: 100
+        default: 24
     },
     date: {
         type: Date,

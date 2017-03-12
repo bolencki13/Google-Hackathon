@@ -63,7 +63,7 @@ module.exports = {
         var json = {};
         Patient.findOneAndUpdate({
             _id: userID
-        }, search, {
+        }, updates, {
             upsert: true
         }, function(err, patient) {
             if (err == null) {
