@@ -21,6 +21,14 @@
             
             if ([ABUtils notNull:[attributes valueForKey:@"id"]]) self.userID = [attributes valueForKey:@"id"];
             
+            if ([ABUtils notNull:[attributes valueForKey:@"name"]]) self.name = [attributes valueForKey:@"name"];
+            
+            if ([ABUtils notNull:[attributes valueForKey:@"doctorID"]]) self.doctorID = [attributes valueForKey:@"doctorID"];
+            
+            if ([ABUtils notNull:[attributes valueForKey:@"isDoctor"]]) self.isDoctor = [ABUtils boolValue: [attributes valueForKey:@"isDoctor"]];
+            if ([ABUtils notNull:[attributes valueForKey:@"achievements"]]) self.achievements = [attributes valueForKey:@"achievements"];
+            
+            if ([ABUtils notNull:[attributes valueForKey:@"completed"]]) self.isDoctor = [ABUtils boolValue:[attributes valueForKey:@"completed"]];
         }
         
     }

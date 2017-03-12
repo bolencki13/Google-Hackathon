@@ -74,6 +74,8 @@ static NSMutableDictionary * registeredSubclasses;
 // Factory class
 +(BleProfile *)createBleProfileWithService:(CBService*)service
 {
+    NSLog(@"Registered subclasses %@", registeredSubclasses);
+    
     if ( registeredSubclasses[service.UUID] )
         return [[registeredSubclasses[service.UUID] alloc] initWithService:service];
     else

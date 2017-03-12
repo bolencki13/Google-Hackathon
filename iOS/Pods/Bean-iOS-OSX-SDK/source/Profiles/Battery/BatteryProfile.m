@@ -31,6 +31,7 @@
     }
     return self;
 }
+
 -(void)readBattery{
     if(peripheral.state == CBPeripheralStateConnected){
         if(characteristic_battery_level){

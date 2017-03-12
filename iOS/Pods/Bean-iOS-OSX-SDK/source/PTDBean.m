@@ -237,11 +237,13 @@ typedef enum { //These occur in sequence
     }
     [appMessageLayer sendMessageWithID:MSG_ID_CC_ACCEL_READ andPayload:nil];
 }
+
 -(void)readBatteryVoltage{
     if(battery_profile){
         [battery_profile readBattery];
     }
 }
+
 -(void)readTemperature {
     if(![self connected]) {
         return;

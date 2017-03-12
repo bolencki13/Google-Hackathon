@@ -24,6 +24,7 @@
 		456A0F061E738C4E00E58DB4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A0F031E738C4E00E58DB4 /* Reachability.m */; };
 		45CA8ADB1E74953700790C1B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CA8ADA1E74953700790C1B /* CoreBluetooth.framework */; };
 		45CA8ADE1E74B7D300790C1B /* TBNDragDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CA8ADD1E74B7D300790C1B /* TBNDragDB.m */; };
+		45CA8AE41E74C9A400790C1B /* STLBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CA8AE31E74C9A400790C1B /* STLBluetoothManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		45CA8ADA1E74953700790C1B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		45CA8ADC1E74B7D300790C1B /* TBNDragDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNDragDB.h; sourceTree = "<group>"; };
 		45CA8ADD1E74B7D300790C1B /* TBNDragDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNDragDB.m; sourceTree = "<group>"; };
+		45CA8AE21E74C9A400790C1B /* STLBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLBluetoothManager.h; sourceTree = "<group>"; };
+		45CA8AE31E74C9A400790C1B /* STLBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLBluetoothManager.m; sourceTree = "<group>"; };
 		FE0D962410676B7E3E596D20 /* Pods-tobaccno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.release.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 			children = (
 				40E0B02A1E735A480032AF37 /* TBNRootViewController.h */,
 				40E0B02B1E735A480032AF37 /* TBNRootViewController.m */,
+				45CA8AE21E74C9A400790C1B /* STLBluetoothManager.h */,
+				45CA8AE31E74C9A400790C1B /* STLBluetoothManager.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			files = (
 				456A0F041E738C4E00E58DB4 /* MongoID.m in Sources */,
 				456A0EEE1E737BC100E58DB4 /* TBNDevice.m in Sources */,
+				45CA8AE41E74C9A400790C1B /* STLBluetoothManager.m in Sources */,
 				40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */,
 				456A0F061E738C4E00E58DB4 /* Reachability.m in Sources */,
 				40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */,

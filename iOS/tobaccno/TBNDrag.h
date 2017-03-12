@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSDate *date;
 
 /// Duration of the drag
-@property (nonatomic) CGFloat duration;
+@property (nonatomic, strong) NSNumber *duration;
 
 /// Custom init with dictionary
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
