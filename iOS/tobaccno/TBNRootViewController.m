@@ -8,6 +8,7 @@
 
 #import "TBNRootViewController.h"
 #import "AFNetworking.h"
+#import "TBNAchieveViewController.h"
 
 
 @interface TBNRootViewController ()
@@ -19,31 +20,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    
-    
-    [manager GET:@"https://hackathon.bolencki13.com/api/patients/info/58c44a9323dc177ddff6638a" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSHTTPURLResponse* r = (NSHTTPURLResponse*)task.response;
-        
-        NSLog(@"The response Object is : %@",responseObject);
-        
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        
-        
-        NSLog(@"The error is %@", error);
-        NSHTTPURLResponse* r = (NSHTTPURLResponse*)operation.response;
-        }
-    ];
 
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 150, 150)];
+    [btn setTitle: @"K L I K" forState:UIControlStateNormal];
+    btn.tintColor = [UIColor blackColor];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     
     
+
+
 }
+-(void)click{
+    
+    TBNAchieveViewController *Controller  = [[TBNAchieveViewController alloc]init];
+    [self presentViewController:Controller animated:YES completion:nil];
+    
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

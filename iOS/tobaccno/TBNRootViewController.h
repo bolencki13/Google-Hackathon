@@ -7,9 +7,9 @@
 //
 
 #import "TBH-Prefix.pch"
+#import "VLAFloatingViewController.h"
 
 @interface TBNRootViewController : UIViewController
-
 
 @end
 

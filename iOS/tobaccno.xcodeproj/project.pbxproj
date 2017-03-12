@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1AD746FD0F99DCD4E5F3FBA5 /* libPods-tobaccno.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */; };
+		22AAE3C11E74DE4C004CE241 /* VLAFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAE3C01E74DE4C004CE241 /* VLAFloatingViewController.m */; };
+		22AAE3CC1E74EA8E004CE241 /* TBNAchieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAE3CB1E74EA8E004CE241 /* TBNAchieveViewController.m */; };
+		22AAE3CE1E751A0F004CE241 /* logo_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 22AAE3CD1E751A0F004CE241 /* logo_circle.png */; };
 		40E0B0261E735A480032AF37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0251E735A480032AF37 /* main.m */; };
 		40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B0281E735A480032AF37 /* TBNAppDelegate.m */; };
 		40E0B02C1E735A480032AF37 /* TBNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0B02B1E735A480032AF37 /* TBNRootViewController.m */; };
@@ -27,6 +30,11 @@
 /* Begin PBXFileReference section */
 		08B5781782CFCC7F9FBE604E /* Pods-tobaccno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tobaccno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tobaccno/Pods-tobaccno.debug.xcconfig"; sourceTree = "<group>"; };
 		132C4BB9DF535A71F4F8B939 /* libPods-tobaccno.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tobaccno.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22AAE3BF1E74DE4C004CE241 /* VLAFloatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLAFloatingViewController.h; path = "../../../../Desktop/Desktop copy/Objective C - Assorted Projects/Lumen3.1/Lumen3.1/VLAFloatingViewController.h"; sourceTree = "<group>"; };
+		22AAE3C01E74DE4C004CE241 /* VLAFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLAFloatingViewController.m; path = "../../../../Desktop/Desktop copy/Objective C - Assorted Projects/Lumen3.1/Lumen3.1/VLAFloatingViewController.m"; sourceTree = "<group>"; };
+		22AAE3CA1E74EA8E004CE241 /* TBNAchieveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNAchieveViewController.h; sourceTree = "<group>"; };
+		22AAE3CB1E74EA8E004CE241 /* TBNAchieveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNAchieveViewController.m; sourceTree = "<group>"; };
+		22AAE3CD1E751A0F004CE241 /* logo_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_circle.png; path = ../../../../Desktop/Tagen/Lumen3.1/logo_circle.png; sourceTree = "<group>"; };
 		40E0B0211E735A480032AF37 /* tobaccno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tobaccno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E0B0251E735A480032AF37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40E0B0271E735A480032AF37 /* TBNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNAppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +145,11 @@
 			children = (
 				40E0B02A1E735A480032AF37 /* TBNRootViewController.h */,
 				40E0B02B1E735A480032AF37 /* TBNRootViewController.m */,
+				22AAE3BF1E74DE4C004CE241 /* VLAFloatingViewController.h */,
+				22AAE3C01E74DE4C004CE241 /* VLAFloatingViewController.m */,
+				22AAE3CA1E74EA8E004CE241 /* TBNAchieveViewController.h */,
+				22AAE3CB1E74EA8E004CE241 /* TBNAchieveViewController.m */,
+				22AAE3CD1E751A0F004CE241 /* logo_circle.png */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AAE3CE1E751A0F004CE241 /* logo_circle.png in Resources */,
 				40E0B0341E735A480032AF37 /* LaunchScreen.storyboard in Resources */,
 				40E0B0311E735A480032AF37 /* Assets.xcassets in Resources */,
 				40E0B02F1E735A480032AF37 /* Main.storyboard in Resources */,
@@ -374,8 +388,10 @@
 				456A0F061E738C4E00E58DB4 /* Reachability.m in Sources */,
 				40E0B0291E735A480032AF37 /* TBNAppDelegate.m in Sources */,
 				40E0B0261E735A480032AF37 /* main.m in Sources */,
+				22AAE3CC1E74EA8E004CE241 /* TBNAchieveViewController.m in Sources */,
 				456A0EE21E7379B400E58DB4 /* TBNUser.m in Sources */,
 				456A0EF31E738B6500E58DB4 /* APIMethods.m in Sources */,
+				22AAE3C11E74DE4C004CE241 /* VLAFloatingViewController.m in Sources */,
 				456A0EEA1E737BAB00E58DB4 /* TBNDrag.m in Sources */,
 				456A0EE61E7379D900E58DB4 /* TBNAchievement.m in Sources */,
 				456A0F051E738C4E00E58DB4 /* OpenUDID.m in Sources */,
